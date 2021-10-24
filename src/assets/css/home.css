@@ -20,3 +20,18 @@ main {
     width: 375px;
     height: 812px;
 }
+
+.exit{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    width: 35px;
+    z-index: 999;
+    display: none;
+}
+
+@media (min-width: 530px){
+    .exit{
+        display: block;
+    }
+}

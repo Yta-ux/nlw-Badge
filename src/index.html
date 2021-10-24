@@ -23,13 +23,17 @@
 <body>
     <header>
         <img class="logo" src="assets/img/nlw.svg" alt="Logo do evento NLW/HEAT promovido pela Rocketseat">
-        <img class="theme" src="assets/img/moon.png" alt="Imagem de uma lua definindo o tema dark como tema atual">
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#generate">Gerador</a>
+            <a href="##footer">Rodapé</a>
+        </div>
     </header>
     <main>
-        <section class="container">
+        <section id="home" class="container">
             <h1 class="title">Seja Bem-vindo ao NLW Badge, Crie sua própria badge para o DoWhile.</h1>
         </section>
-        <section class="construct">
+        <section id="generate" class="construct">
             <form class="datas">
                 <h2 class="legend">Insira seu github para começar</h2>
                 <fieldset aria-labelledby="legend">
@@ -88,7 +92,7 @@
                         </button>
                     </div>
                 </fieldset>
-                <button class="btn view" type="button">Ver badge completa</button>
+                <a class="btn view" href="home.html">Ver badge completa</a>
             </form>
             <div class="badge">
                 <img class="background" src="assets/img/background.svg"
@@ -117,7 +121,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="#footer">
         <img class="logo" src="assets/img/nlw.svg" alt="Logo do evento NLW/HEAT promovido pela Rocketseat">
         <div class="socialProfile">
             <a class="linkProfile" href="https://github.com/yta-ux" target="_blank" rel="noopener noreferrer"><img
@@ -132,6 +136,7 @@
         </div>
     </footer>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/network.js"></script>
 </body>
 
 </html>

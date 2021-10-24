@@ -1,33 +1,32 @@
-const LinksSocialMedia = {
-    github: 'yta-ux',
-    youtube: 'jakelinygracielly',
-    facebook: 'italogustavo.demelo',
-    instagram: 'ita_gustavo',
-    linkedin: 'in/ítalo-gustavo'
-};
-
-function changeSocialMediaLinks() {
-    for (let li of socialLinks.children) {
-        const social = li.getAttribute('class');
-        console.log(social);
-
-        console.log(li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`);
-    }
+function modelSocial(social, url) {
+    let model =
+        `<li class="${social}">
+         <a href="${url}" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/${social}.svg" alt="ícone do ${social}">
+        </a>
+    </li>`
+    socialLinks.innerHTML += model;
 }
 
-changeSocialMediaLinks()
+userImage.src = localStorage.getItem('avatar');
+userName.textContent = localStorage.getItem('name');
+userBio.textContent = localStorage.getItem('bio');
+userLink.href = localStorage.getItem('linkGithub');
+userNameLogin.textContent = localStorage.getItem('username');
 
-function getUser() {
-    const url = `https://api.github.com/users/${LinksSocialMedia.github}`;
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        userImage.src = data.avatar_url;
-        userName.textContent = data.name;
-        userBio.textContent = data.bio
-        userLink.href = data.html_url;
-        userNameLogin.textContent = data.login;
-    })
+if (localStorage.getItem('activeInstagram') === 'true') {
+    modelSocial('instagram', localStorage.getItem('linkInstagram'))
 }
 
-getUser()
+if (localStorage.getItem('activeFacebook') === 'true') {
+    modelSocial('facebook', localStorage.getItem('linkFacebook'))
+}
+
+if (localStorage.getItem('activeYoutube') === 'true') {
+    modelSocial('youtube', localStorage.getItem('linkYoutube'))
+}
+
+
+if (localStorage.getItem('activeLinkedin') === 'true') {
+    modelSocial('linkedin', localStorage.getItem('linkLinkedin'))
+}

@@ -1,10 +1,10 @@
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #09090A;
-    font-family: sans-serif;
     font-family: 'Roboto', sans-serif;
     position: relative;
 }
@@ -16,13 +16,22 @@ header {
     padding: 2rem 4rem;
 }
 
-.logo {
-    width: 150px;
+.menu {
+    color: #E1E1E6;
 }
 
-.theme {
-    width: 20px;
-    height: 20px;
+.menu a {
+    color: #E1E1E6;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu a:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.menu a:hover {
+    color: #fff;
 }
 
 .container {
@@ -55,24 +64,11 @@ header {
     width: 400px;
 }
 
-/* .btn {
-    background-color: #FFCD1E;
-    width: 258px;
-    height: 56px;
-    padding: 1.6rem 4rem;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #09090A;
-    cursor: pointer;
-} */
-
 .construct {
     margin-top: 5rem;
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-around;
     align-items: center;
-    /* padding: 6rem 0; */
 }
 
 .legend {
@@ -154,8 +150,11 @@ fieldset {
     background-color: #ffc423;
     padding: 2rem 3rem;
     font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     border-radius: 0;
     margin-top: 1rem;
+    color: #09090A;
 }
 
 .view:hover {
@@ -230,6 +229,10 @@ footer {
         padding: 0;
     }
 
+    .logo {
+        display: none;
+    }
+
     .title {
         width: 80%;
         font-size: 3.5rem;
@@ -248,6 +251,11 @@ footer {
 @media (min-width: 580px) {
     body {
         padding: 0 4rem
+    }
+
+    .logo {
+        display: block;
+        width: 150px;
     }
 
     .title {
