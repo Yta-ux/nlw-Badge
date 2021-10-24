@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ítalo Gustavo">
+    <meta name="description"
+        content="Projeto desenvolvido durante o evento da NLW/HEAT da Rocketseat. Nesse projeto foi aplicado conceitos passados nas aulas, além de andar a milha extra sugerida pelos instrutores. Essa plataforma cria, com base nos links informados, uma badge para você está preparado para o evento da DoWhile.">
+    <meta name="keywords" content="frontend, nlw, rocketseat, junior, badge, html, css, js, developer, web">
+
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/fonts/RobotoRegular.css">
+    <link rel="stylesheet" href="assets/fonts/RobotoBold.css">
+    <link rel="stylesheet" href="assets/css/badge.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Home | NLW Badge</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="assets/img/nlw.svg" alt="Logo do evento NLW/HEAT promovido pela Rocketseat">
+        <img class="theme" src="assets/img/moon.png" alt="Imagem de uma lua definindo o tema dark como tema atual">
+    </header>
+    <main>
+        <section class="container">
+            <h1 class="title">Seja Bem-vindo ao NLW Badge, Crie sua própria badge para o DoWhile.</h1>
+        </section>
+        <section class="construct">
+            <form class="datas">
+                <h2 class="legend">Insira seu github para começar</h2>
+                <fieldset aria-labelledby="legend">
+                    <div class="data">
+                        <label class="sr-only" for="github">Link do github</label>
+                        <input type="text" id="github" placeholder="Link do Github">
+                        <a class="btn confirm" onclick="initBadge()">
+                            <span class="icon check"></span>
+                        </a>
+                        <a class="btn cancel hide" onclick="deleteBadge()">
+                            <span class="icon uncheck"></span>
+                        </a>
+                    </div>
+                </fieldset>
+
+                <h2 class="legend">Redes Sociais</h2>
+                <fieldset class="internet" aria-labelledby="legend">
+                    <div class="data">
+                        <label class="sr-only" for="instagram">Link do Instagram</label>
+                        <input type="text" id="instagram" class="social" placeholder="Link do Instagram">
+                        <button type="button" class="btn confirm social" onclick="insertInstagram()">
+                            <span class="icon check"></span>
+                        </button>
+                        <button type="button" class="btn cancel hide" onclick="removeInstagram()">
+                            <span class="icon uncheck"></span>
+                        </button>
+                    </div>
+                    <div class="data">
+                        <label class="sr-only" for="facebook">Link do Facebook</label>
+                        <input type="text" id="facebook" class="social" placeholder="Link do Facebook">
+                        <button type="button" class="btn confirm social" onclick="insertFacebook()">
+                            <span class="icon check"></span>
+                        </button>
+                        <button type="button" class="btn cancel hide" onclick="removeFacebook()">
+                            <span class="icon uncheck"></span>
+                        </button>
+                    </div>
+                    <div class="data">
+                        <label class="sr-only" for="youtube">Link do Youtube</label>
+                        <input type="text" id="youtube" class="social" placeholder="Link do Youtube">
+                        <button type="button" class="btn confirm social" onclick="insertYoutube()">
+                            <span class="icon check"></span>
+                        </button>
+                        <button type="button" class="btn cancel hide" onclick="removeYoutube()">
+                            <span class="icon uncheck"></span>
+                        </button>
+                    </div>
+                    <div class="data">
+                        <label class="sr-only" for="linkedin">Link do Linkedin</label>
+                        <input type="text" id="linkedin" class="social" placeholder="Link do Linkedin">
+                        <button type="button" class="btn confirm social" onclick="insertLinkedin()">
+                            <span class="icon check"></span>
+                        </button>
+                        <button type="button" class="btn cancel hide" onclick="removeLinkedin()">
+                            <span class="icon uncheck"></span>
+                        </button>
+                    </div>
+                </fieldset>
+                <button class="btn view" type="button">Ver badge completa</button>
+            </form>
+            <div class="badge">
+                <img class="background" src="assets/img/background.svg"
+                    alt="Background com degrade linear de cores rosa e amarelo">
+                <div class="content">
+                    <div class="avatar">
+                        <img class="stamp" src="assets/img/build.svg" alt="Selo da Rocketseat">
+                        <img src="assets/img/square.svg" id="userImage" class="user" alt="Foto do usuário">
+                    </div>
+
+                    <div class="infos">
+                        <h1 id="userName">Username</h1>
+                        <a id="userLink" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/img/github.svg" alt="ícone do github">
+                            <span id="userNameLogin">github</span>
+                        </a>
+                    </div>
+
+                    <p id="userBio">Biography</p>
+
+                    <ul class="network" id="socialLinks">
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img class="logo" src="assets/img/nlw.svg" alt="Logo do evento NLW/HEAT promovido pela Rocketseat">
+        <div class="socialProfile">
+            <a class="linkProfile" href="https://github.com/yta-ux" target="_blank" rel="noopener noreferrer"><img
+                    class="icon-footer" src="assets/img/github2.svg"
+                    alt="ícone do github que leva para o perfil do criador do site"></a>
+            <a class="linkProfile" href="https://instagram.com/ita_gustavo" target="_blank"
+                rel="noopener noreferrer"><img class="icon-footer" src="assets/img/instagram.svg"
+                    alt="ícone do instagram que leva para o perfil do criador do site"></a>
+            <a class="linkProfile" href="https://likedin.com/in/ítalo_gustavo" target="_blank"
+                rel="noopener noreferrer"><img class="icon-footer" src="assets/img/linkedin.svg"
+                    alt="ícone do linkedin que leva para o perfil do criador do site"></a>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
