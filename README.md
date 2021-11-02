@@ -7,8 +7,8 @@
 </p>
 
 <div align="center">
-      <img src=".github/home.png" width="450px"/>
-      <img src=".github/generator.png" width="450px"/>
+      <img src=".github/home.png" width="400px"/>
+      <img src=".github/generator.png" width="400px"/>
 </div>
   
 
