@@ -60,7 +60,7 @@ function initBadge() {
 }
 
 function deleteBadge() {
-    localStorage.clear;
+    localStorage.clear();
     localStorage.setItem('init', false);
     activeDisabled();
     github.value = '';
