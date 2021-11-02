@@ -19,14 +19,14 @@
 
     <title>Home | NLW Badge</title>
 </head>
-
+  
 <body>
     <header>
         <img class="logo" src="assets/img/nlw.svg" alt="Logo do evento NLW/HEAT promovido pela Rocketseat">
         <div class="menu">
             <a href="#home">Home</a>
             <a href="#generate">Gerador</a>
-            <a href="##footer">Rodapé</a>
+            <a href="#footer">Rodapé</a>
         </div>
     </header>
     <main>
@@ -36,11 +36,11 @@
         <section id="generate" class="construct">
             <form class="datas">
                 <h2 class="legend">Insira seu github para começar</h2>
-                <fieldset aria-labelledby="legend">
+                <fieldset aria-label="Inserir o github">
                     <div class="data">
                         <label class="sr-only" for="github">Link do github</label>
                         <input type="text" id="github" placeholder="Link do Github">
-                        <a class="btn confirm" onclick="initBadge()">
+                        <a aria-label="confirmar" class="btn confirm" onclick="initBadge()">
                             <span class="icon check"></span>
                         </a>
                         <a class="btn cancel hide" onclick="deleteBadge()">
@@ -50,44 +50,44 @@
                 </fieldset>
 
                 <h2 class="legend">Redes Sociais</h2>
-                <fieldset class="internet" aria-labelledby="legend">
+                <fieldset class="internet" aria-label="Personalizar com as redes sociais">
                     <div class="data">
                         <label class="sr-only" for="instagram">Link do Instagram</label>
                         <input type="text" id="instagram" class="social" placeholder="Link do Instagram">
-                        <button type="button" class="btn confirm social" onclick="insertInstagram()">
+                        <button aria-label="confirmar" type="button" class="btn confirm social" onclick="insertInstagram()">
                             <span class="icon check"></span>
                         </button>
-                        <button type="button" class="btn cancel hide" onclick="removeInstagram()">
+                        <button aria-label="cancelar" type="button" class="btn cancel hide" onclick="removeInstagram()">
                             <span class="icon uncheck"></span>
                         </button>
                     </div>
                     <div class="data">
                         <label class="sr-only" for="facebook">Link do Facebook</label>
                         <input type="text" id="facebook" class="social" placeholder="Link do Facebook">
-                        <button type="button" class="btn confirm social" onclick="insertFacebook()">
+                        <button aria-label="confirmar" type="button" class="btn confirm social" onclick="insertFacebook()">
                             <span class="icon check"></span>
                         </button>
-                        <button type="button" class="btn cancel hide" onclick="removeFacebook()">
+                        <button aria-label="cancelar" type="button" class="btn cancel hide" onclick="removeFacebook()">
                             <span class="icon uncheck"></span>
                         </button>
                     </div>
                     <div class="data">
                         <label class="sr-only" for="youtube">Link do Youtube</label>
                         <input type="text" id="youtube" class="social" placeholder="Link do Youtube">
-                        <button type="button" class="btn confirm social" onclick="insertYoutube()">
+                        <button aria-label="confirmar" type="button" class="btn confirm social" onclick="insertYoutube()">
                             <span class="icon check"></span>
                         </button>
-                        <button type="button" class="btn cancel hide" onclick="removeYoutube()">
+                        <button aria-label="cancelar" type="button" class="btn cancel hide" onclick="removeYoutube()">
                             <span class="icon uncheck"></span>
                         </button>
                     </div>
                     <div class="data">
                         <label class="sr-only" for="linkedin">Link do Linkedin</label>
                         <input type="text" id="linkedin" class="social" placeholder="Link do Linkedin">
-                        <button type="button" class="btn confirm social" onclick="insertLinkedin()">
+                        <button aria-label="confirmar" type="button" class="btn confirm social" onclick="insertLinkedin()">
                             <span class="icon check"></span>
                         </button>
-                        <button type="button" class="btn cancel hide" onclick="removeLinkedin()">
+                        <button aria-label="cancelar" type="button" class="btn cancel hide" onclick="removeLinkedin()">
                             <span class="icon uncheck"></span>
                         </button>
                     </div>
